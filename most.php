@@ -9,7 +9,7 @@
     <link rel="icon" href="gfx/favicon.ico">
     <title>Asteroids - Highschores - WIP</title>
     <link href="style/b.m.css" rel="stylesheet">
-    <link href="style/asteroids.css" rel="stylesheet">
+    <link href="style/highscores.css" rel="stylesheet">
   </head>
 
   <body>
