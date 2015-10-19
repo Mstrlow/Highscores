@@ -1,0 +1,27 @@
+<?xml version='1.0'?>  
+<highschores>  
+  <spiel id='1'>  
+     <name>Tobias</name>  
+     <score>1010</score>  
+  </spiel>  
+  
+  <spiel id='2'>  
+     <name>Nils</name>  
+     <score>102</score>  
+  </spiel>
+  
+  <spiel id='3'>  
+     <name>Yannic</name>  
+     <score>103</score>  
+  </spiel>
+
+  <spiel id='4'>  
+     <name>Felix</name>  
+     <score>104</score>  
+  </spiel>
+
+  <spiel id='5'>  
+     <name>Silas</name>  
+     <score>106</score>  
+  </spiel>
+</highschores>
