@@ -63,11 +63,11 @@
                   foreach ( $xml->spiel as $spiel )
                   {   
                     echo '<tr>';
-                     echo '<td>' . $spiel['id'] . '</td>';
+                     echo '<td>' . $spiel->id . '</td>';
                      echo '<td>' . $spiel->name . '</td>';
                      echo '<td>' . $spiel->score . '</td>';
                     echo '</tr>';
-                  }   
+                  }
                   echo '</table>';
                   echo '</div>';
                      

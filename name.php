@@ -83,7 +83,7 @@
                     if(isset($_POST['name']) && $spiel->name == $_POST['name'])
                     {
                       echo '<tr>';
-                      echo '<td>' . $spiel['id'] . '</td>';
+                      echo '<td>' . $spiel->id  . '</td>';
                       echo '<td>' . $spiel->name . '</td>';
                       echo '<td>' . $spiel->score . '</td>';
                       echo '</tr>';
@@ -91,7 +91,7 @@
                     else if (!isset($_POST['name']) || $_POST['name'] == '*')
                     {
                       echo '<tr>';
-                      echo '<td>' . $spiel['id'] . '</td>';
+                      echo '<td>' . $spiel->id  . '</td>';
                       echo '<td>' . $spiel->name . '</td>';
                       echo '<td>' . $spiel->score . '</td>';
                       echo '</tr>';

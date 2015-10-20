@@ -81,10 +81,10 @@
                   echo '<th> Highschore';
                   foreach ( $xml->spiel as $spiel )
                   {   
-                    if(isset($_POST['number']) && $spiel['id'] == $_POST['number'])
+                    if(isset($_POST['number']) && $spiel->id  == $_POST['number'])
                     {
                       echo '<tr>';
-                      echo '<td>' . $spiel['id'] . '</td>';
+                      echo '<td>' . $spiel->id  . '</td>';
                       echo '<td>' . $spiel->name . '</td>';
                       echo '<td>' . $spiel->score . '</td>';
                       echo '</tr>';
@@ -92,7 +92,7 @@
                     else if (!isset($_POST['number']) || $_POST['number'] == '*')
                     {
                       echo '<tr>';
-                      echo '<td>' . $spiel['id'] . '</td>';
+                      echo '<td>' . $spiel->id  . '</td>';
                       echo '<td>' . $spiel->name . '</td>';
                       echo '<td>' . $spiel->score . '</td>';
                       echo '</tr>';
