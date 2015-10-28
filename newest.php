@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html>
-<?php include '/include/header.php'; ?>
-
-<body>
-<body>
-
 <?php
 $thisPage = "newest";
-include '/include/mainNav.php';
+include '/include/header.php';
 ?>
+
+<body>
+
+<?php include '/include/mainNav.php'; ?>
 
 
 <div class="container-fluid">
-  <div class="row">
-    <?php
-    $thisPage = "newest";
-    include '/include/sideNav.php';
-    ?>
+    <div class="row">
+        <?php include '/include/sideNav.php'; ?>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Neuestes Spiel</h1>
-            <?php 
-            $xmlFile = 'highscores.xml'; 
+            <h1 class="page-header">Neuestes Spiel</h1>
+            <?php
+            $xmlFile = 'highscores.xml';
 
-            if (file_exists($xmlFile)) 
-            { 
+            if (file_exists($xmlFile)) {
                 $xml = simplexml_load_file($xmlFile);
 
                 $id = 'home';
                 include '/include/showTable.php';
 
-            } 
-            else
-            { 
-                exit("Datei $xmlFile kann nicht geoeffnet werden."); 
-            } 
-          ?>
+            } else {
+                exit("Datei $xmlFile kann nicht geoeffnet werden.");
+            }
+            ?>
         </div>
-      </div>
     </div>
-    <?php include '/include/footer.php'; ?>
+</div>
+<?php include '/include/footer.php'; ?>
 </body>
 </html>

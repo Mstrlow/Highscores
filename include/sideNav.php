@@ -12,38 +12,29 @@
         $indexLink = '<a href="index.php">Bestenliste - Funktioniert';
         $newestLink = '<a href="newest.php">Neuestes Spiel - Work in Progress';
         $mostLink = '<a href="most.php">Öftester Spieler - Work in Progress';
-        if($thisPage == "index")
-        {
+        if ($thisPage == "index") {
             echo '<li class="active">';
-                echo $indexLink;
+            echo $indexLink;
             echo '<span class="sr-only">(current)</span>';
-        }
-        else
-        {
+        } else {
             echo ' <li>';
-                echo $indexLink;
+            echo $indexLink;
         }
-        if($thisPage == "newest")
-        {
+        if ($thisPage == "newest") {
             echo '<li class="active">';
-                echo $newestLink;
+            echo $newestLink;
             echo '<span class="sr-only">(current)</span>';
-        }
-        else
-        {
+        } else {
             echo ' <li>';
-                echo $newestLink;
+            echo $newestLink;
         }
-        if($thisPage == "most")
-        {
+        if ($thisPage == "most") {
             echo '<li class="active">';
-                echo $mostLink;
+            echo $mostLink;
             echo '<span class="sr-only">(current)</span>';
-        }
-        else
-        {
+        } else {
             echo ' <li>';
-                echo $mostLink;
+            echo $mostLink;
         }
         echo '</a></li>';
         ?>
@@ -52,25 +43,19 @@
         <?php
         $nameLink = '<a href="name.php">Suche nach Spielern - Funktioniert';
         $numberLink = '<a href="number.php">Suche nach Spielnummer - Funktioniert';
-        if($thisPage == "name")
-        {
+        if ($thisPage == "name") {
             echo '<li class="active">';
-                echo $nameLink;
+            echo $nameLink;
             echo '<span class="sr-only">(current)</span>';
-        }
-        else
-        {
+        } else {
             echo ' <li>';
-                echo $nameLink;
+            echo $nameLink;
         }
-        if($thisPage == "number")
-        {
+        if ($thisPage == "number") {
             echo '<li class="active">';
-                echo $numberLink;
+            echo $numberLink;
             echo '<span class="sr-only">(current)</span>';
-        }
-        else
-        {
+        } else {
             echo ' <li>';
             echo $numberLink;
         }
