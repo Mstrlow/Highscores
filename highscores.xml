@@ -9,4 +9,39 @@
 	<name>Felix</name>
 	<score>80</score>
 </spiel>
+<spiel>
+	<id>3</id>
+	<name>A</name>
+	<score>22</score>
+</spiel>
+<spiel>
+	<id>4</id>
+	<name>B</name>
+	<score>55</score>
+</spiel>
+<spiel>
+	<id>5</id>
+	<name>C</name>
+	<score>77</score>
+</spiel>
+<spiel>
+	<id>6</id>
+	<name>D</name>
+	<score>88</score>
+</spiel>
+<spiel>
+	<id>7</id>
+	<name>E</name>
+	<score>111</score>
+</spiel>
+<spiel>
+	<id>8</id>
+	<name>F</name>
+	<score>1231</score>
+</spiel>
+<spiel>
+	<id>9</id>
+	<name>G</name>
+	<score>323</score>
+</spiel>
 </highscores>

@@ -50,32 +50,59 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Highscores</h1>
             <?php 
-            $xmlFile = 'highscores.xml'; 
+            $xmlFile = 'highscores.xml';
 
             if (file_exists($xmlFile)) 
             { 
-                $xml = simplexml_load_file($xmlFile); 
-                echo '<div class="table-responsive">';
-                  echo '<table class="table table-striped">';
-                  echo '<th> Spielnumer';
-                  echo '<th> Name';
-                  echo '<th> Highschore';
-                  foreach ( $xml->spiel as $spiel )
-                  {   
-                    echo '<tr>';
-                     echo '<td>' . $spiel->id . '</td>';
-                     echo '<td>' . $spiel->name . '</td>';
-                     echo '<td>' . $spiel->score . '</td>';
-                    echo '</tr>';
-                  }
-                  echo '</table>';
-                  echo '</div>';
-                     
-            } 
+              $xml = simplexml_load_file($xmlFile);
+
+              $arr=array();
+              foreach($xml->spiel as $aHighscore)
+              {
+                $arr[]=$aHighscore;
+              }
+
+              usort($arr,function($a,$b)
+              {
+                return $b->score - $a->score; // Absteigend nach Score
+                #return $a->score - $b->score; // Aufsteigend nach Score
+              });
+
+              $xml=simplexml_load_string(<<<XML
+<?xml version="1.0"?>
+<highscore>
+</highscore>
+XML
+              );
+
+              foreach($arr as $aHighscore)
+              {
+                $sorting = $xml->addChild($aHighscore->getName());
+                $sorting->addChild($aHighscore->id->getName(), (string)$aHighscore->id);
+                $sorting->addChild($aHighscore->name->getName(), (string)$aHighscore->name);
+                $sorting->addChild($aHighscore->score->getName(), (string)$aHighscore->score);
+              }
+
+              echo '<div class="table-responsive">';
+              echo '<table class="table table-striped">';
+              echo '<th> Spielnumer';
+              echo '<th> Name';
+              echo '<th> Highschore';
+              foreach ( $xml->spiel as $spiel )
+              {
+                echo '<tr>';
+                 echo '<td>' . $spiel->id . '</td>';
+                 echo '<td>' . $spiel->name . '</td>';
+                 echo '<td>' . $spiel->score . '</td>';
+                echo '</tr>';
+              }
+              echo '</table>';
+              echo '</div>';
+            }
             else
-            { 
-                exit("Datei $xmlFile kann nicht geoeffnet werden."); 
-            } 
+            {
+                exit("Datei $xmlFile kann nicht geoeffnet werden.");
+            }
           ?>
         </div>
       </div>
