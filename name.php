@@ -3,16 +3,16 @@
 <?php
 $thisPage = "name";
 $searchContent = "name";
-include '/include/header.php';
+include 'include/header.php';
 ?>
 
 <body>
 
-<?php include '/include/mainNav.php'; ?>
+<?php include 'include/mainNav.php'; ?>
 
 <div class="container-fluid">
     <div class="row">
-        <?php include '/include/sideNav.php'; ?>
+        <?php include 'include/sideNav.php'; ?>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">Suche nach Spielern</h1>
@@ -47,7 +47,7 @@ include '/include/header.php';
             if (file_exists($xmlFile)) {
                 $xml = simplexml_load_file($xmlFile);
 
-                include '/include/showTable.php';
+                include 'include/showTable.php';
 
             } else {
                 exit("Datei $xmlFile kann nicht geoeffnet werden.");
@@ -57,6 +57,6 @@ include '/include/header.php';
 
     </div>
 </div>
-<?php include '/include/footer.php'; ?>
+<?php include 'include/footer.php'; ?>
 </body>
 </html>
