@@ -2,6 +2,7 @@
 <html>
 <?php
 $thisPage = "number";
+$searchContent = "id";
 include '/include/header.php';
 ?>
 
@@ -46,8 +47,6 @@ include '/include/header.php';
             if (file_exists($xmlFile)) {
                 $xml = simplexml_load_file($xmlFile);
 
-                $searchContent = "id";
-                $id = "searchSomething";
                 include '/include/showTable.php';
 
             } else {

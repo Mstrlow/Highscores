@@ -24,7 +24,6 @@ include '/include/header.php';
             if (file_exists($xmlFile)) {
                 $xml = simplexml_load_file($xmlFile);
 
-                $id = 'home';
                 include '/include/showTable.php';
 
             } else {

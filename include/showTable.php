@@ -5,24 +5,9 @@
  * Date: 28.10.2015
  * Time: 17:10
  */
-if ($id == 'home') {
-    echo '<div class="table-responsive">';
-    echo '<table class="table table-striped">';
-    echo '<th> Spielnummer';
-    echo '<th> Name';
-    echo '<th> Score';
-    foreach ($xml->spiel as $spiel) {
-        echo '<tr>';
-        echo '<td>' . $spiel->id . '</td>';
-        echo '<td>' . $spiel->name . '</td>';
-        echo '<td>' . $spiel->score . '</td>';
-        echo '</tr>';
-    }
-    echo '</table>';
-    echo '</div>';
-}
 
-if ($id == 'searchSomething') {
+if (isset($searchContent))
+{
     echo '<div class="table-responsive">';
     echo '<table class="table table-striped">';
     echo '<th> Spielnumer';
@@ -42,6 +27,23 @@ if ($id == 'searchSomething') {
             echo '<td>' . $spiel->score . '</td>';
             echo '</tr>';
         }
+    }
+    echo '</table>';
+    echo '</div>';
+}
+else
+{
+    echo '<div class="table-responsive">';
+    echo '<table class="table table-striped">';
+    echo '<th> Spielnummer';
+    echo '<th> Name';
+    echo '<th> Score';
+    foreach ($xml->spiel as $spiel) {
+        echo '<tr>';
+        echo '<td>' . $spiel->id . '</td>';
+        echo '<td>' . $spiel->name . '</td>';
+        echo '<td>' . $spiel->score . '</td>';
+        echo '</tr>';
     }
     echo '</table>';
     echo '</div>';

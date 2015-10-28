@@ -25,7 +25,6 @@ include '/include/header.php';
                 $xml = simplexml_load_file($xmlFile);
 
                 include '/include/sortingScript.php';
-                $id = 'home';
                 include '/include/showTable.php';
 
             } else {
